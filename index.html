@@ -20,13 +20,45 @@
         <section class="bg-gray-100 p-4 m-2">
             <input id="search-feild" type="text" placeholder="search..." class="input input-bordered w-full max-w-xs" />
             <button onclick="handleSearch()" class="btn btn-active btn-accent">Search</button>
+
+            <!-- anothe btn -->
+            <input id="input-feild" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="searchHandler()" class="btn btn-active btn-neutral">Search..</button>
         </section>
+
+        <!-- spinner or loader -->
+
+
 
         <!-- search result -->
         <section>
+            <div id="spainer-loading" class="text-center my-40 hidden">
+                <span class="loading loading-spinner text-accent"></span>
+            </div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 
             </div>
+            <!-- show all -->
+            <div id="show-all-container" class="hidden text-center my-8">
+                <button onclick="handleShowAll()" class="btn btn-accent">Show all</button>
+            </div>
+
+
+            <!-- show modal -->
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <h3 class="font-bold text-lg">Hello!</h3>
+                    <p class="py-4">Press ESC key or click the button below to close</p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </section>
     </main>
 
